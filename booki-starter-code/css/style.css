@@ -13,6 +13,8 @@
   --padding-footer-li: 8px 0 8px 0;
 
   --font-weight-text: 600;
+  --font-size-placeholder: 1.2em;
+  --font-size-h2: 1.5em;
 }
 
 .fa-solid {
@@ -50,7 +52,7 @@ a {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin: 0 30px 0 0;
+  margin: 10px 50px 0 0;
   padding: 0;
   gap: 50px;
   height: 80px;
@@ -61,7 +63,7 @@ a {
 .header-navbar_links > li > a:hover {
   color: var(--main-color);
   border-top: var(--main-color) solid 2px;
-  padding-top: 6px;
+  padding-top: 16px;
 }
 /*Navbar --------- */
 /* header-title --------- */
@@ -88,6 +90,7 @@ a {
   padding: var(--input-padding);
   background-color: var(--main-bg-color);
   border-radius: 15px 0 0 15px;
+  color: black;
 }
 /* Icône de Recherche*/
 .fa-solid.fa-magnifying-glass {
@@ -101,7 +104,7 @@ a {
 .header-form_input::placeholder {
   color: black;
   font-weight: var(--font-weight-text);
-  font-size: 1.2em;
+  font-size: var(--font-size-placeholder);
 }
 .header-form_label {
   background-color: var(--main-color);
@@ -148,15 +151,16 @@ a {
   display: flex;
   flex-direction: row;
   height: 40px;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
   align-items: center;
 }
 
 .fa-solid.fa-info {
   border: solid 1px var(--filter-bg-color);
-  padding: 5px 10px;
+  font-size: 10px;
+  padding: 5px 8px;
   border-radius: 50px;
-  margin: 0 10px 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .header-info_title {
@@ -172,12 +176,16 @@ a {
   width: 62%;
   padding: 20px;
 }
+.hebergements-title {
+  margin: 10px 0 30px 0;
+  font-size: var(--font-size-h2);
+}
 
 .hebergements-cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
 }
 
 .hebergements-cards_unit {
@@ -212,9 +220,9 @@ a {
 
 .hebergements-cards_afficherplus {
   display: block;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: var(--font-weight-text);
-  margin-top: 20px;
+  margin-top: 40px;
 }
 /* Fin de Hébergement à Marseille */
 
@@ -269,6 +277,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: var(--font-size-h2);
 }
 
 .populaires-cards .card {
@@ -312,14 +321,20 @@ a {
   margin-bottom: 80px;
 }
 
+.activites-title {
+  margin: 0 0 30px 30px;
+  font-size: var(--font-size-h2);
+}
+
 .activites-allcards {
   display: flex;
-  gap: 50px;
+  gap: 30px;
+  margin: 0 30px;
 }
 
 .activites-cards {
   display: block;
-  height: 500px;
+  height: 420px;
   width: 25%;
   border-radius: 20px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
@@ -335,6 +350,7 @@ a {
 
 .activites-cards > h3 {
   padding-left: 20px;
+  font-size: 1em;
 }
 /* Section Activités à Marseille */
 
@@ -407,7 +423,7 @@ a {
   }
 
   .populaires-cards a {
-    width: 30%;
+    width: 32%;
   }
 
   .populaires-cards .card-title {
@@ -444,7 +460,254 @@ a {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   /* ... */
+  * {
+    padding: 0;
+    margin: 0;
+  }
   .main-container {
     color: purple;
+    max-width: 1440px;
+    min-width: 320px;
+    padding: 0;
+  }
+
+  /* Header-navbar -------- */
+  .header-navbar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .header-navbar_logo {
+    margin: 30px 0 30px 0;
+  }
+  .header-navbar_links {
+    display: flex;
+    width: 100%;
+    align-self: center;
+    justify-content: space-between;
+    margin: 0;
+    gap: 0;
+  }
+  .header-navbar_links li {
+    width: 50%;
+    text-align: center;
+  }
+  .header-navbar_links a {
+    display: block;
+    width: 100%;
+    padding: 10px 0 20px 0;
+  }
+
+  .header-navbar_hebergement {
+    color: var(--main-color);
+  }
+  .header-navbar_activites {
+    color: black;
+  }
+
+  .header-navbar_activites::after {
+    content: "";
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    width: 49vw;
+    height: 2px;
+    background-color: var(--main-bg-color);
+  }
+
+  .header-navbar_hebergement::after {
+    content: "";
+    position: absolute;
+    bottom: 20%;
+    left: -10%;
+    width: 60vw;
+    height: 2px;
+    background-color: var(--main-color);
+  }
+
+  /* Fin Header-navbar --------------- */
+
+  /* Header-title --------------- */
+  .header-title {
+    justify-self: center;
+    width: 90%;
+    font-size: 1.4em;
+  }
+  /* Fin Header-title --------------- */
+
+  /* Header-From --------------- */
+  .header-form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-form_label {
+    display: none;
+  }
+
+  .header-form_input {
+    border: solid 1px var(--main-bg-color);
+    width: 200px;
+  }
+
+  .fa-solid.fa-magnifying-glass {
+    transform: translateX(-20px);
+    display: block;
+    color: white;
+    background-color: var(--main-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    align-content: center;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Fin Header-Form --------------- */
+
+  /* Header-filtre --------------- */
+  .header-filtres_title {
+    margin-left: 20px;
+  }
+  .header-filtres {
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header-filtres_all {
+    text-align: center;
+    margin: 8px 4px;
+    border: solid 3px var(--main-bg-color);
+    width: 32%;
+    font-size: 0.9em;
+    padding: 12px 15px;
+  }
+
+  .fa-solid.fa-fire,
+  .fa-solid.fa-heart,
+  .fa-solid.fa-person,
+  .fa-solid.fa-money-bill-1-wave {
+    font-size: 18px;
+    margin-right: 0px;
+  }
+
+  /* Fin Header-filtre --------------- */
+  /* Header-info --------------- */
+  .fa-solid.fa-info {
+    font-size: 12px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 7px;
+    width: 13px;
+    margin-left: 30px;
+  }
+
+  .header-info_title {
+    font-size: 1em;
+  }
+  /* Header-info --------------- */
+
+  /* hebergement et populaires --------------- */
+  .hebergements-and-populaires {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .hebergements-and-populaires section {
+    border-radius: 0%;
+    width: 100%;
+  }
+
+  /* Section populaires --------------- */
+  .populaires {
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+  .populaires-title > h2 {
+    font-size: 20px;
+  }
+  .populaires-title > i {
+    font-size: 15px;
+  }
+  .populaires-cards {
+    display: flex;
+    display: block;
+    flex-direction: column;
+  }
+
+  .card-content {
+    width: 90%;
+  }
+  .populaires-cards .card-title {
+    font-size: 0.8em;
+  }
+  .populaires-cards .card-subtitle {
+    font-size: 0.7em;
+  }
+
+  .populaires-cards .card-rating {
+    font-size: 0.7em;
+    margin: 0;
+  }
+
+  .populaires-cards .card {
+    margin: 15px 0;
+  }
+
+  /* Section hebergement --------------- */
+  #hebergements {
+    background-color: white;
+  }
+
+  .hebergements-title {
+    font-size: 1.4em;
+    margin-left: 20px;
+  }
+  .hebergements-cards {
+    justify-content: center;
+  }
+  .hebergements-cards_unit {
+    width: 90%;
+    height: 250px;
+    display: block;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .hebergements-cards_unit > img {
+    height: 60%;
+  }
+  /* Fin Section hebergement --------------- */
+  /* Section Activités  --------------- */
+  #activites {
+    width: 100%;
+    height: 1100px;
+  }
+  .activites-title {
+    margin-left: 50px;
+  }
+
+  .activites-allcards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .activites-cards {
+    width: 90%;
+  }
+  .activites-cards > h3 {
+    font-size: 1em;
+    margin-top: 15px;
+  }
+  /* Fin Section Activités  --------------- */
+
+  /* Section Footer  --------------- */
+  #footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-list {
+    margin: 10px 0 0 10px;
   }
 }
