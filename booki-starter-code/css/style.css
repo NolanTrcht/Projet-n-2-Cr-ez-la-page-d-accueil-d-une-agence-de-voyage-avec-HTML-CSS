@@ -447,8 +447,9 @@ a {
   .activites-cards > h3 {
     font-size: 0.8em;
     padding-right: 10px;
+    height: 20%;
+    margin: 0;
     align-content: center;
-    justify-content: flex-start;
   }
   /*Section Activités à Marseille */
 
@@ -465,7 +466,6 @@ a {
     margin: 0;
   }
   .main-container {
-    color: purple;
     max-width: 1440px;
     min-width: 320px;
     padding: 0;
@@ -576,7 +576,6 @@ a {
     justify-content: center;
   }
   .header-filtres_all {
-    text-align: center;
     margin: 8px 4px;
     border: solid 3px var(--main-bg-color);
     width: 32%;
@@ -668,7 +667,7 @@ a {
   }
   .hebergements-cards_unit {
     width: 90%;
-    height: 250px;
+    height: 210px;
     display: block;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   }
